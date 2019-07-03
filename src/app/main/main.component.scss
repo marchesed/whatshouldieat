@@ -1,0 +1,39 @@
+@import '../../styles.scss';
+
+.header-section{
+    margin: 20px auto;
+    h1{
+        font-size: 3em;
+        font-family: $marker;
+        text-align: center;
+    }
+}
+
+.button-section{
+    margin: 0 auto;
+    margin-top: 50px;
+    display: block;
+    text-align: center;
+    a{
+        margin-top: 50px;
+        font-family: $marker;
+        font-size: 2em;
+        color: $white;
+        background-color: $red;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    a:hover{
+        text-decoration: none;
+        background-color: $red-faded;
+    }
+}
+.output-section{
+    margin: 0 auto;
+    h2{
+        margin-top: 20px;
+        font-size: 3em;
+        font-family: $marker;
+        text-align: center;
+    }
+}

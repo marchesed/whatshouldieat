@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/where-should-i-eat",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
