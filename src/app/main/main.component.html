@@ -1,11 +1,19 @@
 <div class="container">
   <div class="header-section">
-    <h1>What should I eat??</h1>
+    <h1 *ngIf="!isProfane">What should I eat??</h1>
+    <h1 *ngIf="isProfane">What the fuck should I eat??</h1>
+    <label class="switch">
+      <input type="checkbox" [(ngModel)]="isProfane" (click)="handleSwitchChange()">
+      <span class="slider round"></span>
+    </label>
+    <p>Profanity switch</p>
   </div>
   <div class="button-section">
-    <a (click)="handleClick()" href="javascript:void(0)">TELL ME!!</a>
+    <a *ngIf="!isProfane" (click)="handleClick()" href="javascript:void(0)">TELL ME!!</a>
+    <a *ngIf="isProfane" (click)="handleClick()" href="javascript:void(0)">FUCKING TELL ME!!</a>
   </div>
   <div class="output-section">
-    <h2>{{output}}</h2>
+    <h2 *ngIf="!isProfane">{{output}}</h2>
+    <h2 *ngIf="isProfane">{{profaneOutput}}</h2>
   </div>
 </div>

@@ -7,13 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   output: String;
+  profaneOutput: String;
   submitted: boolean = false;
+  isProfane: boolean = false;
   options: Array<String> = [
     "Italian",
     "American",
     "Chinese",
     "Indian",
     "Mexican"
+  ]
+  profaneOptions: Array<String> = [
+    "Eat some fucking Italian food",
+    "Eat some fucking American food",
+    "Eat some fucking Chinese food",
+    "Eat some fucking Indian food",
+    "Eat some fucking Mexican food"
   ]
   numberOfOptions:number;
 
@@ -26,6 +35,11 @@ export class MainComponent implements OnInit {
     var rand = Math.random()*100
     console.log(Math.floor(rand/this.numberOfOptions))
     this.output = this.options[Math.floor(rand/this.numberOfOptions)]
+    this.profaneOutput = this.profaneOptions[Math.floor(rand/this.numberOfOptions)]
+  }
+  handleSwitchChange(){
+    this.isProfane = !this.isProfane;
+    console.log(this.isProfane)
   }
 
 }
