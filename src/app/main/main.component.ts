@@ -33,13 +33,11 @@ export class MainComponent implements OnInit {
   }
   handleClick(){
     var rand = Math.random()*100
-    console.log(Math.floor(rand/this.numberOfOptions))
     this.output = this.options[Math.floor(rand/this.numberOfOptions)]
     this.profaneOutput = this.profaneOptions[Math.floor(rand/this.numberOfOptions)]
   }
   handleSwitchChange(){
     this.isProfane = !this.isProfane;
-    console.log(this.isProfane)
   }
 
 }
